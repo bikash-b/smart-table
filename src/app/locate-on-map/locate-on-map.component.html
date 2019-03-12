@@ -1,0 +1,17 @@
+<div class='map-wrapper'>
+    <div id='map-canvas2'>
+        <div id="map" #map></div>
+    </div>
+    <div id='over'>
+        <div>
+            <input class="auto-complete" type="text" #mapAutoCompleteSerch>
+        </div>
+    </div>
+    <div id="over_2" *ngIf="photos && photos.length > 0">
+        <div class="photo-gallery">
+            <div *ngFor="let photo of photos" class="photo-cover" (click)="navigateToImageDetail(photo.map)">
+                <img height="200px" width="300px" [attr.src]="photo.image">
+            </div>
+        </div>
+    </div>
+</div>
